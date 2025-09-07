@@ -26,4 +26,12 @@ public class Gato extends Animal implements  Domesticavel {
     public boolean precisaPassear(){
         return false;
     }
+
+    @Override
+    public String toString(){
+        String info = super.toString();
+        info += "Diária: R$" + calcularDiaria();
+        return  info;
+    }
+
 }

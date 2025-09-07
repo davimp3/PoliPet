@@ -15,7 +15,7 @@ public class Cachorro extends Animal implements Domesticavel {
     @Override
     public double calcularDiaria(){
         double soma =0.0;
-            if(!(adestrado)){
+            if(adestrado){
                 soma = diaria+10+(0.5*getPeso());
             } else {
                 soma = 50+(0.5*getPeso());
@@ -32,7 +32,17 @@ public class Cachorro extends Animal implements Domesticavel {
     public boolean precisaPassear(){
         return true;
     }
+
+    @Override
+    public String toString(){
+        String info = super.toString();
+        info += "Adestrado:" + this.adestrado+ " ";
+        info+= "Diária: R$" + this.calcularDiaria();
+        return info;
+    }
 }
+
+ 
 
 
 

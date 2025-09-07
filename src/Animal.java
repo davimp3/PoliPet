@@ -9,7 +9,6 @@ public abstract class Animal {
         this.peso = peso;
     }
 
-    
     public String getNome() {
         return nome;
     }
@@ -26,8 +25,16 @@ public abstract class Animal {
         this.peso = peso;
     }
 
+    public String toString(){
+        String info = "Animal";
+        info += "Nome:"+getNome() + ",";
+        info += "Peso:"+getPeso() + ", ";
+        return info;
+    }
+
     public abstract double calcularDiaria();
     
     public abstract String emitirSom();
+
 
 }

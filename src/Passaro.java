@@ -31,6 +31,14 @@ public class Passaro extends Animal implements Domesticavel{
     public boolean precisaPassear(){
         return false;
     }
+
+     @Override
+    public String toString(){
+        String info = super.toString();
+        info += "Adestrado:" + this.raro+ " ";
+        info+= "Diária: R$" + this.calcularDiaria();
+        return info;
+    }
     
 }
 
